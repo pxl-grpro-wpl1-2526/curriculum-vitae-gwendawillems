@@ -16,7 +16,7 @@ body {
     height: 180px;
     object-fit: cover;
     border-radius: 12px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    box-shadow: 0 0 15px rgb(239, 168, 93);
     transition: 0.3s;
     cursor: pointer;
 }
@@ -26,6 +26,7 @@ body {
     padding: 50px 15px;
     text-align: center;
     color: white;
+    border-radius: 12px;
 }
 
 .name-content {
@@ -37,10 +38,10 @@ body {
 }
 
 .name-text {
-    border: 1px solid white;    /*Rand*/
-    padding: 10px 20px;         /* Ruimte binnen de rand */
-    border-radius: 12px;        /* Afgeronde hoeken */
-    display: inline-block;      /* Zorgt dat het kader rond de tekst past */
+    border: 1px solid white; /*Rand*/
+    padding: 10px 20px; /* Ruimte binnen de rand */
+    border-radius: 12px; /* Afgeronde hoeken */
+    display: inline-block; /* Zorgt dat het kader rond de tekst past */
 
 }
 /* Layout */
@@ -60,38 +61,21 @@ section h2 {
     padding-bottom: 5px;
 }
 
-/* Intro + foto */
+/* Intro */
 .intro {
     display: flex;
-    gap: 30px;
+    gap: 10px;
     flex-wrap: wrap;
+    border-radius: 8px;
+    padding-left:0;
 }
-
-.intro-right{
-    border-radius: 12px;
-}
-
-.profile-photo {
-    width: 500px;
-    height: 230px;
-    border-radius: 12px;
-    object-fit: cover;
-    cursor: pointer;
-    transition: box-shadow 0.3s ease;
-}
-
-/* Hover effect (vereiste) */
-.profile-photo:hover {
-    box-shadow: 0 0 20px rgba(0,0,0,0.4);
-}
-
-
 .opleiding {
     background: #E8D2ACFF;
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 1px 4px rgba(0,0,0,0.1);
     margin-bottom: 10px;
+    gap: 10px;
 }
 
 
@@ -136,11 +120,6 @@ section h2 {
 }
 
 /* Werkervaring */
-.ervaringen {
-    list-style: none;
-    padding: 0;
-}
-
 .ervaring {
     margin-bottom: 20px;
     padding-bottom: 15px;
@@ -152,7 +131,7 @@ section h2 {
     font-size: 0.9em;
 }
 
-/* FOOTER (vereiste) */
+/* FOOTER*/
 footer {
     background: #dda178;
     color: white;
