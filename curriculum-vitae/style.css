@@ -4,10 +4,11 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f8f8f8;
     color: #333;
+    background: #f4e8d9;
 }
 
 .header-photo:hover {
-    box-shadow: 0 0 25px rgba(0,0,0,0.45);
+    box-shadow: 0 0 25px rgb(250, 151, 48);
 }
 
 .header-photo {
@@ -19,28 +20,160 @@ body {
     transition: 0.3s;
     cursor: pointer;
 }
+
+.name {
+    background: linear-gradient(to bottom right, #dda947, #fbf6ec);
+    padding: 50px 15px;
+    text-align: center;
+    color: white;
+}
+
+.name-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.name-text {
+    border: 1px solid white;    /*Rand*/
+    padding: 10px 20px;         /* Ruimte binnen de rand */
+    border-radius: 12px;        /* Afgeronde hoeken */
+    display: inline-block;      /* Zorgt dat het kader rond de tekst past */
+
+}
+/* Layout */
+main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+section h2 {
+    margin-bottom: 10px;
+    border-bottom: 2px solid #dda178;
+    padding-bottom: 5px;
+}
+
+/* Intro + foto */
+.intro {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.intro-right{
+    border-radius: 12px;
+}
+
+.profile-photo {
+    width: 500px;
+    height: 230px;
+    border-radius: 12px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+}
+
+/* Hover effect (vereiste) */
+.profile-photo:hover {
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+
+.opleiding {
+    background: #E8D2ACFF;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    margin-bottom: 10px;
+}
+
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-left: 0;
+}
+
+.skills li {
+    list-style: none;
+    background: #E8D2ACFF;
+    padding: 6px 12px;
+    border-radius: 6px;
+}
+
+/* Talenkennis tabel */
 #Taalkennis {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 10px;
 }
-#Taalkennis th, #Taalkennis td {
-    border: 1px solid #ccc;
-    padding: 8px 12px;
-    text-align: left;
+/*omlijning*/
+#Taalkennis th,
+#Taalkennis td {
+    padding: 12px;
+    border: 1px solid #efa85d;
 }
-
+/*Taal + Niveau*/
 #Taalkennis th {
-    background-color: #fa9730;
-    font-weight: bold;
+    background-color: #DDA178FF;
 }
 
-#Taalkennis tr:nth-child(even) {
-    background-color: #efa85d;
-    color: white;
+/* Nederlands, Frans*/
+#Taalkennis tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
 }
-#Taalkennis tr:nth-child(odd) {
-    background-color: #f4cea7;
-    color: white;
+/*Engels*/
+#Taalkennis tbody tr:nth-child(even) {
+    background-color: #E8D2ACFF
+;
+}
 
+/* Werkervaring */
+.ervaringen {
+    list-style: none;
+    padding: 0;
+}
+
+.ervaring {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+.date {
+    color: #666;
+    font-size: 0.9em;
+}
+
+/* FOOTER (vereiste) */
+footer {
+    background: #dda178;
+    color: white;
+    padding: 5px 12px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: fixed;
+    bottom: 0;
+    width: 98%;
+}
+
+.top-button {
+    color: #dda178;
+    text-decoration: none;
+    background: white;
+    padding: 2px 4px;
+    border-radius: 10px;
+}
+
+.top-button:hover {
+    background: #e8d2ac ;
+    color: white;
 }
