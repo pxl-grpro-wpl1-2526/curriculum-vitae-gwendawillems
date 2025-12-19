@@ -336,3 +336,139 @@ footer a:hover {
         text-decoration: underline;
 }
 
+/* MOBIEL (575px) */
+
+@media (max-width: 575.98px) {
+
+    .name-content {
+        grid-template-columns: auto;
+        gap: 20px;
+    }
+
+    .name-foto {
+        justify-self: center;
+        transform: none;
+        margin-top: 12px;
+    }
+
+    .top-nav {
+        gap: 8px;
+    }
+
+    .nav-button {
+        width: 90%;
+        justify-content: center;
+    }
+
+    .skills li:active {
+        transform: rotateY(180deg);
+    }
+
+
+    .opleidingen-wrapper,
+    .hobby-project-wrapper {
+        grid-template-columns: auto;
+    }
+
+    #Taalkennis {
+        display: none;
+    }
+
+    .talen-mobile {
+        display: block;
+    }
+
+    .ervaringen {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0;
+        margin: 0 auto;
+        list-style: none;
+    }
+
+    .ervaring {
+        width: 100%;
+        max-width: 90%;
+        margin-bottom: 16px;
+    }
+
+    .skills li {
+        font-size: 0.9rem;
+        padding: 8px 14px;
+        margin: 6px 6px;
+        white-space: normal;
+        text-align: center;
+    }
+
+
+}
+
+/* TABLET (576px – 991px) */
+
+@media (min-width: 576px) and (max-width: 991px) {
+
+    .page-wrapper {
+        margin: 20px 12px;
+        padding: 16px;
+    }
+
+    .name-content {
+        grid-template-columns: auto;
+        gap: 24px;
+    }
+
+    .name-foto {
+        justify-self: center;
+        transform: none;
+        margin-top: 16px;
+    }
+
+    .top-nav {
+        gap: 10px;
+    }
+
+    .nav-button {
+        font-size: 0.9rem;
+        padding: 8px 14px;
+        min-width: 40%;
+        border-radius: 16px;
+    }
+}
+
+
+/* DESKTOP (992px) */
+
+@media (min-width: 992px) {
+
+    #Taalkennis {
+        display: table;
+    }
+
+    .talen-mobile {
+        display: none;
+    }
+    .skills li:hover {
+        transform: rotateY(180deg);
+    }
+
+    .ervaringen {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0;
+        margin: 0 auto;
+        list-style: none;
+    }
+
+    .ervaring {
+        width: 100%;
+        max-width: 90%;
+        margin-bottom: 16px;
+    }
+    .skill-card:hover .skill-inner {
+        transform: rotateY(180deg);
+    }
+}
+
+
