@@ -1,158 +1,340 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
-    color: #333;
-    background: #f4e8d9;
+    font-family: "Montserrat", sans-serif;
+    color: #e6dccf;
+    background: linear-gradient(90deg, #e6dccf 0%, #594b42 30%, #594b42 70%, #e6dccf 100%);
 }
 
-.header-photo:hover {
-    box-shadow: 0 0 25px rgb(250, 151, 48);
+html, body {
+        overflow-x: hidden;
 }
 
-.header-photo {
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 0 15px rgb(239, 168, 93);
-    transition: 0.3s;
-    cursor: pointer;
+.page-wrapper {
+        max-width: 950px;
+        width: 100%;
+        margin: 40px auto;
+        padding: 24px;
+        background-color: rgba(74, 62, 53, 0.63);
+        border-radius: 16px;
+        box-shadow: 0 12px 30px rgb(244, 232, 217);
 }
 
-.name {
-    background: linear-gradient(to bottom right, #dda947, #fbf6ec);
-    padding: 50px 15px;
-    text-align: center;
-    color: white;
-    border-radius: 12px;
+
+
+header.name {
+        margin-bottom: 20px;
+        padding: 10px 12px 20px;
+        background: linear-gradient(to bottom, #302925 0%, #1e1a17 50%, #302925 100%);
+        border-radius: 16px;
 }
+
+/* navigatie knoppen */
+
+.top-nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6px;
+        margin-bottom: 16px;
+}
+
+.nav-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        padding: 6px 14px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        white-space: nowrap;
+        background: #302925;
+        color: #e6dccf;
+        border: 2px solid #ff8a1f;
+        border-radius: 16px;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.6);
+
+}
+
+.nav-button:hover {
+        background: #ff8a1f;
+        color: #14110f;
+        box-shadow: 0 8px 18px rgba(255, 138, 31, 0.4);
+        text-decoration: none;
+}
+
+/* naam */
 
 .name-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1000px;
-    margin: 0 auto;
+        display: grid;
+        grid-template-columns: 70% auto;
+        align-items: center;
 }
 
 .name-text {
-    border: 1px solid white; /*Rand*/
-    padding: 10px 20px; /* Ruimte binnen de rand */
-    border-radius: 12px; /* Afgeronde hoeken */
-    display: inline-block; /* Zorgt dat het kader rond de tekst past */
+        text-align: center;
+}
+
+.name-text h1 {
+        margin: 0;
+        font-size: 2.4rem;
+        font-weight: 700;
+        color: #e6dccf;
+        -webkit-text-stroke: 1px #ff8a1f;
+}
+
+.name-foto {
+        justify-self: end;
+        transform: none;
+}
+
+/* Profielfoto */
+
+.header-photo {
+        width: 170px;
+        height: 170px;
+        object-fit: cover;
+        border-radius: 16px;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, .25);
 
 }
-/* Layout */
-main {
-    max-width: 1000px;
-    margin: 30px auto;
-    padding: 0 20px;
+
+.profile-link:hover
+.header-photo {
+        transform: none;
+        box-shadow: 0 8px 18px rgba(255, 138, 31, 0.35);
 }
+
+
 
 section {
-    margin-bottom: 40px;
+        margin-bottom: 40px;
 }
 
 section h2 {
-    margin-bottom: 10px;
-    border-bottom: 2px solid #dda178;
-    padding-bottom: 5px;
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+        border-bottom: 2px solid #ff8a1f;
+        color: #ffb566;
 }
 
-/* Intro */
-.intro {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    border-radius: 8px;
-    padding-left:0;
-}
-.opleiding {
-    background: #E8D2ACFF;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-    margin-bottom: 10px;
-    gap: 10px;
+section > *:not(h2) {
+        margin-top: 20px;
 }
 
+/* Kaarten opleding,ervaring */
 
-.skills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    padding-left: 0;
+.opleiding,
+.ervaring,
+.card {
+        background: #302925;
+        padding: 15px;
+        border-radius: 16px;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+        list-style: none;
+        position: relative;
+        transform-style: preserve-3d;
+}
+
+.opleiding:hover,
+.ervaring:hover,
+.card:hover,
+.skills li:hover {
+        transform: none;
+        box-shadow: 0 8px 18px rgba(255, 138, 31, 0.35);
+}
+
+.skills li:active {
+        box-shadow: 0 4px 10px rgba(255, 138, 31, 0.35);
+}
+
+/* Opleidingen */
+
+.opleidingen-wrapper {
+        display: grid;
+        gap: 20px;
 }
 
 .skills li {
-    list-style: none;
-    background: #E8D2ACFF;
-    padding: 6px 12px;
-    border-radius: 6px;
+        list-style: none;
+        display: inline-flex;
+        align-items: center;
+        background: #302925;
+        padding: 10px 18px;
+        margin: 10px 14px 10px 0;
+        border-radius: 16px;
+        font-size: 1.2rem;
+        font-weight: 500;
+        white-space: nowrap;
+        box-shadow: none;
+        position: relative;
 }
 
-/* Talenkennis tabel */
+.skill-inner {
+        position: relative;
+        transform-style: preserve-3d;
+        transition: transform 0.6s ease;
+}
+
+
+
+.skill-front,
+.skill-back {
+        backface-visibility: hidden;
+
+}
+
+.skill-front {
+        background: #302925;
+        color: #e6dccf;
+}
+
+
+.skill-back {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: rotateY(180deg);
+}
+
+.skill-back span {
+        transform: rotateY(180deg);
+}
+
+/* Talen */
+
 #Taalkennis {
-    width: 100%;
-    border-collapse: collapse;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 16px;
+        background-color: #1e1a17;
+        border-radius: 16px;
+        overflow: hidden;
+        border: 2px solid #ff8a1f;
 }
-/*omlijning*/
-#Taalkennis th,
-#Taalkennis td {
-    padding: 12px;
-    border: 1px solid #efa85d;
-}
-/*Taal + Niveau*/
+
 #Taalkennis th {
-    background-color: #DDA178FF;
+        background-color: #302925;
+        color: #ffb566;
+        padding: 14px;
+        text-align: left;
+        font-weight: 600;
+        font-size: 1rem;
 }
 
-/* Nederlands, Frans*/
+#Taalkennis td {
+        padding: 14px;
+        font-size: 0.95rem;
+        color: #e6dccf;
+}
+
 #Taalkennis tbody tr:nth-child(odd) {
-    background-color: #f9f9f9;
+        background-color: #1e1a17;
 }
-/*Engels*/
+
 #Taalkennis tbody tr:nth-child(even) {
-    background-color: #E8D2ACFF
-;
+        background-color: #302925;
 }
 
-/* Werkervaring */
-.ervaring {
-    margin-bottom: 20px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #ccc;
+#Taalkennis tbody tr:hover {
+        background-color: #3a2f27;
+        transition: background-color 0.2s ease;
 }
 
-.date {
-    color: #666;
-    font-size: 0.9em;
+
+/* Hobby's & Projecten */
+
+.hobby-project-wrapper {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 20px;
 }
 
-/* FOOTER*/
+.card a {
+        color: #ffb566;
+        text-decoration: none;
+        font-weight: 600;
+}
+
+.card a:hover {
+        color: #ff8a1f;
+
+        text-decoration: underline;
+}
+
+/* Slideshow */
+
+.slideshow {
+        position: relative;
+        width: 100%;
+        height: 180px;
+        margin-bottom: 15px;
+        overflow: hidden;
+        border-radius: 16px;
+}
+
+.slide {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+}
+
+.slide.active {
+        opacity: 1;
+}
+
+/* Contact */
+
+#contact a {
+        color: #ffb566;
+        text-decoration: none;
+        font-weight: 600;
+}
+
+#contact a:hover {
+        color: #ff8a1f;
+        text-decoration: underline;
+}
+
+/* footer */
+
 footer {
-    background: #dda178;
-    color: white;
-    padding: 5px 12px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    position: fixed;
-    bottom: 0;
-    width: 98%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        border-radius: 16px;
+        padding: 20px;
+        background: #1e1a17;
+        color: #e6dccf;
+        border: 1px solid #ff8a1f;
 }
 
-.top-button {
-    color: #dda178;
-    text-decoration: none;
-    background: white;
-    padding: 2px 4px;
-    border-radius: 10px;
+footer a {
+        color: #ffb566;
+        text-decoration: none;
+        font-weight: 600;
 }
 
-.top-button:hover {
-    background: #e8d2ac ;
-    color: white;
+footer a:hover {
+        color: #ff8a1f;
+        text-decoration: underline;
 }
+
+
+
